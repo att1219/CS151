@@ -1,5 +1,5 @@
 #include <iostream>
-#include <string>
+#include <stream>
 using namespace std;
 
 int main()
@@ -9,6 +9,5 @@ int main()
     int age;
     int feetOfHeight;
     int inchesOfHeight;
-    int weight
-
+    int weight;
 }
