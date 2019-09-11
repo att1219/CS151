@@ -1,7 +1,6 @@
 #include <iostream>
 #include <string>
 using namespace std;
-
 int main()
 {
     string firstName;
@@ -30,8 +29,11 @@ int main()
     cin >> weight;
 
     int upperBirthYear = 2019 - age;
+    
     int lowerBirthYear = upperBirthYear - 1;
+    
     int heightInInches = feetOfHeight * 12 + inchesOfHeight;
+    
     
     double heightInCm = 2.54 * heightInInches;
     
