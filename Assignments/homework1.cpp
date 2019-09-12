@@ -9,7 +9,8 @@ int main()
     int feetOfHeight;
     int inchesOfHeight;
     int weight;
-
+    
+    
     cout << "Enter your first name";
     cin >> firstName;
 
@@ -18,16 +19,13 @@ int main()
 
     cout << "Enter your age";
     cin >> age;
-
-    cout << "Enter your height (in feet)";
-    cin >> feetOfHeight; 
     
-    cout << "Enter your height (in inches)";
-    cin >> inchesOfHeight;
-
+    cout << "Enter your height (in feet and inches)";
+    cin >> feetOfHeight >> inchesOfHeight; 
+    
     cout << "Enter your weight (in pounds)";
     cin >> weight;
-
+    
     int upperBirthYear = 2019 - age;
     
     int lowerBirthYear = upperBirthYear - 1;
@@ -50,17 +48,16 @@ int main()
     double lowerObese = 30 * ratio; 
     double upperObese = 39.9 * ratio;
 
-    cout >> "Candidate: firstName, lastName";
-    cout >> "Birth Year Range: lowerBirthYear - upperBirthYear";
-    cout >> "Height: heightInInches in (heightInCm) cm";
-    cout >> "Weight: weight lb (weightInN)";
-    cout >> "BMI: bmi";
-    cout >> "For height heightInInches in, the weight ranges are";
-    cout >> "Normal Weight Range: lowerNormal lb - upperNormal lb";
-    cout >> "OverWeight Range: lowerOverweight lb - upperOverweight lb";
-    cout >> "Obese Weight Range: lowerObese lb - upperObese lb";
-    cout >> "less than lowerNormal lb or greater than upperObese lb"; 
-
+    cout << "Candidate: " <<lastName <<" , " <<firstName <<"\n";
+    cout << "Birth Year Range: " <<lowerBirthYear <<"-" <<upperBirthYear <<"\n";
+    cout << "Height: " <<heightInInches <<"in " <<"(" <<heightInCm <<"cm)" <<"\n";
+    cout << "Weight: " <<weight <<"lb " <<"(" <<weightInN <<" N)" <<"\n";
+    cout << "BMI:" <<bmi <<"\n";
+    cout << "For height " <<heightInInches <<"in, the weight ranges are" <<"\n";
+    cout << "Normal Weight Range: " <<lowerNormal <<"lb" <<" - " <<upperNormal <<"lb" <<"\n";
+    cout << "OverWeight Range: " <<lowerOverweight <<"lb" <<" - " <<upperOverweight <<"lb" <<"\n";
+    cout << "Obese Weight Range: " <<lowerObese <<"lb" <<" - " <<upperObese <<"lb" <<"\n";
+    cout << "Extreme Weight Range: less than " <<lowerNormal <<"lb or greater than " <<upperObese <<"lb" <<"\n";
 
     return 0;
 }
