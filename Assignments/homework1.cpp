@@ -1,5 +1,6 @@
 #include <iostream>
 #include <string>
+#include <iomanip>
 using namespace std;
 int main()
 {
@@ -27,9 +28,7 @@ int main()
     cin >> weight;
     
     int upperBirthYear = 2019 - age;
-    
     int lowerBirthYear = upperBirthYear - 1;
-    
     int heightInInches = feetOfHeight * 12 + inchesOfHeight;
     
     
@@ -48,11 +47,11 @@ int main()
     double lowerObese = 30 * ratio; 
     double upperObese = 39.9 * ratio;
 
-    cout << "Candidate: " <<lastName <<" , " <<firstName <<"\n";
+    cout << "Candidate: " <<lastName <<"," <<firstName <<"\n";
     cout << "Birth Year Range: " <<lowerBirthYear <<"-" <<upperBirthYear <<"\n";
     cout << "Height: " <<heightInInches <<"in " <<"(" <<heightInCm <<"cm)" <<"\n";
     cout << "Weight: " <<weight <<"lb " <<"(" <<weightInN <<" N)" <<"\n";
-    cout << "BMI:" <<bmi <<"\n";
+    cout << "BMI: " <<bmi <<"\n";
     cout << "For height " <<heightInInches <<"in, the weight ranges are" <<"\n";
     cout << "Normal Weight Range: " <<lowerNormal <<"lb" <<" - " <<upperNormal <<"lb" <<"\n";
     cout << "OverWeight Range: " <<lowerOverweight <<"lb" <<" - " <<upperOverweight <<"lb" <<"\n";
