@@ -2,6 +2,7 @@
 #include <string>
 #include <iomanip>
 using namespace std;
+
 int main()
 {
     string firstName;
@@ -31,7 +32,8 @@ int main()
     int lowerBirthYear = upperBirthYear - 1;
     int heightInInches = feetOfHeight * 12 + inchesOfHeight;
     
-    
+    cout << fixed <<setprecision(2) <<"\n";
+
     double heightInCm = 2.54 * heightInInches;
     
     double weightInN = 4.45 * weight;
