@@ -35,11 +35,8 @@ int main()
     cout << fixed <<setprecision(2) <<"\n";
 
     double heightInCm = 2.54 * heightInInches;
-    
     double weightInN = 4.45 * weight;
-    
     double bmi = weight * 703.0 / (heightInInches * heightInInches);
-    
     double ratio = (heightInInches * heightInInches) / 703.0;
 
     double lowerNormal = 18.5 * ratio;
