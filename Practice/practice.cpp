@@ -3,19 +3,15 @@
 #include <iomanip>
 using namespace std;
 
+void Echo(string msg);
+void Echo(string msg)
+{
+    cout << "Enter a string";
+    cin >> msg;
+}
+
 int main()
 {
-    int x;
-    
-    string word = "Statement";
-    
-    double num = 6 * num; 
-    
-    char choose;
-    cin >> choose;
-
-    int value = 5;
-    cout << value + 2 <<"\n";
-
+    cout <<Echo(msg);
     return 0;
 }
