@@ -227,6 +227,7 @@ int main()
     cout << "\n";
     
     cout << "This is the 4th function:\n";
+    cout <<"\n";
     CapitalI();
     cout << "\n";
 
@@ -240,6 +241,7 @@ int main()
     cout <<"\n";
     
     cout << "This is the 7th function\n";
+    cout <<"\n";
     PerfectSquare();
     cout <<"\n";
     
@@ -290,11 +292,11 @@ int main()
     cout <<"\n";
 
     cout << "This is the 17th function:\n";
-    double a = 8
-    couble b = 17
-    cout << a <<" " << b <<"\n";
-    NumberSwap(a,b);
-    cout << a <<" " << b <<"\n";
+    double e = 8;
+    double f = 17;
+    cout << e <<" " << f <<"\n";
+    NumberSwap(e,f);
+    cout << e <<" " << f <<"\n";
     cout <<"\n";
 
     cout << "This is the 18th function:\n";
