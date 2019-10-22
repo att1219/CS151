@@ -232,7 +232,7 @@ int main()
     cout << "\n";
 
     cout << "This is the 5th function:\n";
-    char lol = 5;
+    char lol = '5';
     NextNextCharacter(lol);
     cout <<"\n";
 
@@ -270,10 +270,10 @@ int main()
     cout <<"\n";
     
     cout << "This is the 13th function:\n";
-    char a = 8;
-    char b = 11;
-    char c = 12;
-    char d = 14;
+    char a = '8';
+    char b = 'A';
+    char c = 'B';
+    char d = 'G';
     cout << a << " " << b <<" " << c <<" " << d <<"\n";
     SwapFour(a,b,c,d);
     cout << a << " " << b <<" " << c <<" " << d <<"\n";
