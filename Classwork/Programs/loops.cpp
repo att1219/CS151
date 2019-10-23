@@ -2,7 +2,7 @@
 #include <string>
 using namespace std;
 
-void CountToN(int n);
+/*void CountToN(int n);
 void CountToN(int n)
 {
    int i = 1;
@@ -13,7 +13,7 @@ void CountToN(int n)
 }
 
 
-/*int Fib(int n);
+int Fib(int n);
 int Fib(int n)
 {
     if (n <= 0)
@@ -26,9 +26,27 @@ int Fib(int n)
     }
 }*/
 
+int GCD(int m,int n)
+{
+    int r;
+    while(n != 0)
+    {
+        r = m % n;
+        m = n;
+        n = r;
+    }
+    return m;
+}
+
+void CountToN(int n)
+{
+    for (int i = 3; i <= 100; i += 3)
+    {
+        cout << i << " ";
+    }
+}
 int main()
 {
-    CountToN(10);
-    
+    CountToN(100);
     return 0;
 }

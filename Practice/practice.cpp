@@ -17,7 +17,7 @@ char Print(int x)
 {
     cout << "x =" << x << '\n';
     return x;
-}*/
+}
 string IntToString(int x,int y)
 {
     string ex = to_string(x);
@@ -25,8 +25,10 @@ string IntToString(int x,int y)
 
     string all = "The first number is:\n" + ex + "The second number is:\n" + why; 
 
-    return all;
-}
+    return ;
+}*/
+
+
 int main()
 {
     /*int x,y,z;
@@ -36,7 +38,12 @@ int main()
     cin >> z;
     cout << Transfer(Triple(z),x) <<"\n";
     Print(2 * y);
-    Print(6 - x);
-    return 0;*/
-    cout << IntToString(12,19);
+    Print(6 - x);*/
+    
+    int x = 8;
+    int y = 0;
+    bool b = x < y;
+    cout << b <<"\n";
+    
+    return 0;
 }
