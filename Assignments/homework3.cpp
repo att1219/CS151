@@ -165,7 +165,30 @@ string LetterGrade(double grade)
 void Sort(double&a,double&b,double&c);
 void Sort(double&a,double&b,double&c)
 {
-    if (a <= b) {
+    if (a < b && b < c) {
+        a = a;
+        b = b;
+        c = c;
+    } else if (a < c && c < b) {
+        a = a;
+        b = c;
+        c = b;
+    } else if (b < a < c) {
+        a = b;
+        b = a;
+        c = c;
+    } else if (b < c < a) {
+        a = b;
+        b = c;
+        c = a;
+    } else if (c < a < b) {
+        a = c;
+        b = a;
+        c = b;
+    } else {
+        a = c;
+        b = b;
+        c = a;
     }
 }
 
@@ -239,12 +262,23 @@ double TemperatureConverter(double Temp, char From, char To)
     }
 }
 
-/*int Median(int a,int b,int c,int d,int e);
+/*int MedianThree(int a,int b,int c);
+int MedianThree(int a,int b,int c)
+{
+    if ((a < b && b < c) || (c < b && b < a)) {
+        return b;
+    } else if ((b < a && a < c) || (c < a && a < b)) {
+        return a;
+    } else {
+        return c;
+    }
+}*/
+
+int Median(int a,int b,int c,int d,int e);
 int Median(int a,int b,int c,int d,int e)
 {
-  
-
-}*/
+    if (
+}
 
 string DateFormat(int mn,int dy,int yr);
 string DateFormat(int mn,int dy,int yr)
@@ -310,7 +344,12 @@ int main()
 
     cout << LetterGrade(93) <<"\n";
 
-    //Sort()
+    double a = 7.8;
+    double c = 14.5;
+    double b = 16.9;
+    cout <<a <<" " <<b <<" " <<c <<"\n";
+    Sort(a,c,b);
+    cout <<a <<" " <<b <<" " <<c <<"\n";
 
     cout << QuadraticSolutions(1, 4, -5) <<"\n";
 
@@ -318,7 +357,7 @@ int main()
 
     cout << TemperatureConverter(100,'c','f') <<"\n";
     
-    //cout << Median(12,18,1,70,23) <<"\n";
+    cout << MedianThree(99,12,19) <<"\n";
 
     cout << DateFormat(12, 19, 1999);
 

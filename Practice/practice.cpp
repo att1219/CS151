@@ -1,3 +1,4 @@
+#include <ios>
 #include <iostream>
 #include <string>
 using namespace std;
@@ -28,6 +29,15 @@ string IntToString(int x,int y)
     return ;
 }*/
 
+bool IsOddPrime(int x)
+{
+    if (x == 2 || x == 3 || x == 5 || x == 7)
+    {
+        return "True";
+    } else {
+        return "False";
+    }
+}
 
 int main()
 {
@@ -40,10 +50,7 @@ int main()
     Print(2 * y);
     Print(6 - x);*/
     
-    int x = 8;
-    int y = 0;
-    bool b = x < y;
-    cout << b <<"\n";
+    cout <<IsOddPrime(4);
     
     return 0;
 }
