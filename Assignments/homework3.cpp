@@ -165,33 +165,24 @@ string LetterGrade(double grade)
 void Sort(double&a,double&b,double&c);
 void Sort(double&a,double&b,double&c)
 {
-    if (a < b && b < c) {
-        a = a;
-        b = b;
-        c = c;
-    } else if (a < c && c < b) {
-        a = a;
-        b = c;
-        c = b;
-    } else if (b < a < c) {
+    
+    double d;
+    if (a < b) {
+        d = a;
         a = b;
-        b = a;
-        c = c;
-    } else if (b < c < a) {
-        a = b;
-        b = c;
-        c = a;
-    } else if (c < a < b) {
-        a = c;
-        b = a;
-        c = b;
-    } else {
-        a = c;
-        b = b;
-        c = a;
+        b = d;
     }
-}
-
+    if (a < c) {
+        d = a;
+        a = c;
+        c = d;
+    }
+    if (b < c) {
+        d = b;
+        b = c;
+        c = d;
+    }
+}    
 int QuadraticSolutions(double a,double b,double c);
 int QuadraticSolutions(double a,double b,double c)
 {
@@ -262,22 +253,60 @@ double TemperatureConverter(double Temp, char From, char To)
     }
 }
 
-/*int MedianThree(int a,int b,int c);
-int MedianThree(int a,int b,int c)
-{
-    if ((a < b && b < c) || (c < b && b < a)) {
-        return b;
-    } else if ((b < a && a < c) || (c < a && a < b)) {
-        return a;
-    } else {
-        return c;
-    }
-}*/
-
 int Median(int a,int b,int c,int d,int e);
 int Median(int a,int b,int c,int d,int e)
 {
-    if (
+    if (a < b){
+        //swap them without declaring a new variable
+        //do the with the first 3 variables until
+        //a is the smallest, b is the 2nd smallest and
+        //c is the median. Then return the median (which is c)
+        a = a + b;
+        b = a - b;
+        a = a - b;
+    }
+    if (a < c){
+        a = a + c;
+        c = a - c;
+        a = a - c;
+    }
+    if (a < d){
+        a = a + d;
+        d = a - d;
+        a = a - d;
+    }
+    if (a < e){
+        a = a + e;
+        e = a - e;
+        a = a - e;
+    }
+    if (b < c) {
+        b = b + c;
+        c = b - c;
+        b = b - c;
+    }
+    if (b < d) {
+        b = b + d;
+        d = b - d;
+        b = b - d;
+    }
+    if (b < e) {
+        b = b + e;
+        e = b - e;
+        b = b - e;
+    }
+    if (c < d) {
+        c = c + d;
+        d = c - d;
+        c = c - d;
+    }
+    if (c < e) {
+        c = c + e;
+        e = c - e;
+        c = c - e;
+    }
+
+    return c; 
 }
 
 string DateFormat(int mn,int dy,int yr);
@@ -312,11 +341,11 @@ int main()
 
     cout << AbsoluteValue(-5) <<"\n";
 
-    int x = 51;
-    int y = 40;
-    cout <<x <<" " <<y <<"\n";
-    SwapIfGreater(x,y);
-    cout <<x <<" " <<y <<"\n";
+    int a = 51;
+    int b = 40;
+    cout <<a <<" " <<b <<"\n";
+    SwapIfGreater(a,b);
+    cout <<a <<" " <<b <<"\n";
 
     cout << Maximum(10,19,16) <<"\n";
 
@@ -324,10 +353,10 @@ int main()
 
     cout << ToUpperCase('m') <<"\n";
 
-    int z = 9;
-    cout << z <<"\n";
-    Change(z);
-    cout << z <<"\n";
+    int m = 9;
+    cout << m <<"\n";
+    Change(m);
+    cout << m <<"\n";
 
     cout << RightAngleQuadrilateral(8.5, 11) <<"\n";
 
@@ -344,12 +373,12 @@ int main()
 
     cout << LetterGrade(93) <<"\n";
 
-    double a = 7.8;
-    double c = 14.5;
-    double b = 16.9;
-    cout <<a <<" " <<b <<" " <<c <<"\n";
-    Sort(a,c,b);
-    cout <<a <<" " <<b <<" " <<c <<"\n";
+    double x = 7.8;
+    double y = 14.5;
+    double z = 16.9;
+    cout <<x <<" " <<y <<" " <<z <<"\n";
+    Sort(y,x,z);
+    cout <<x <<" " <<y <<" " <<z <<"\n";
 
     cout << QuadraticSolutions(1, 4, -5) <<"\n";
 
@@ -357,7 +386,7 @@ int main()
 
     cout << TemperatureConverter(100,'c','f') <<"\n";
     
-    cout << MedianThree(99,12,19) <<"\n";
+    cout << Median(99,9,100,67,13) <<"\n";
 
     cout << DateFormat(12, 19, 1999);
 

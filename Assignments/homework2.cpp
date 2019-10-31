@@ -110,7 +110,7 @@ bool LesserAbsolute(int m,int n)
 {
 
     bool result = (m*m) < (n*n);
-
+    return result;
 }
 
 void SwapFour(char&r,char&s,char&t,char&u);

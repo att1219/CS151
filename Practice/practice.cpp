@@ -1,9 +1,8 @@
-#include <ios>
 #include <iostream>
 #include <string>
 using namespace std;
 
-/*int Transfer(int x,int y)
+int Transfer(int x,int y)
 {
     x = 2 * y * y + 5;
     return x;
@@ -16,10 +15,11 @@ int Triple(int x)
 
 char Print(int x)
 {
-    cout << "x =" << x << '\n';
+    cout << "x =" << x << "\n";
     return x;
 }
-string IntToString(int x,int y)
+
+/*string IntToString(int x,int y)
 {
     string ex = to_string(x);
     string why = to_string(y);
@@ -27,30 +27,47 @@ string IntToString(int x,int y)
     string all = "The first number is:\n" + ex + "The second number is:\n" + why; 
 
     return ;
-}*/
+}
 
-bool IsOddPrime(int x)
+void CountDownToInt(int n)
 {
-    if (x == 2 || x == 3 || x == 5 || x == 7)
-    {
-        return "True";
+    if (n % 2 == 1) {
+        while (n >= 1) {
+            cout << n <<"\n";
+            n = n - 2;
+        } 
+    } else if (n % 2 == 0) {
+         while (n > 1) {
+            cout << n <<"\n";
+            n = n - 2;
+            }
+    } else if (n <= 0) {
+        cout << "\n";
     } else {
-        return "False";
     }
 }
 
+int MedianThree(int a,int b,int c);
+int MedianThree(int a,int b,int c)
+{
+    if ((a < b && b < c) || (c < b && b < a)) {
+        return b;
+    } else if ((b < a && a < c) || (c < a && a < b)) {
+        return a;
+    } else {
+        return c;
+    }
+}*/
+
 int main()
 {
-    /*int x,y,z;
+    int x,y,z;
     cin >> x;
     y = Triple(x + 2);
     cout << '(' << x << "," << y <<")\n";
     cin >> z;
     cout << Transfer(Triple(z),x) <<"\n";
     Print(2 * y);
-    Print(6 - x);*/
-    
-    cout <<IsOddPrime(4);
-    
+    Print(6 - x);
     return 0;
 }
