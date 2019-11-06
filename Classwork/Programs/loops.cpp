@@ -26,25 +26,7 @@ int Fib(int n)
     }
 }*/
 
-int GCD(int m,int n)
-{
-    int r;
-    while(n != 0)
-    {
-        r = m % n;
-        m = n;
-        n = r;
-    }
-    return m;
-}
 
-void CountToN(int n)
-{
-    for (int i = 3; i <= 100; i += 3)
-    {
-        cout << i << " ";
-    }
-}
 int main()
 {
     CountToN(100);

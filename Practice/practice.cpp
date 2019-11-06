@@ -2,23 +2,6 @@
 #include <string>
 using namespace std;
 
-int Transfer(int x,int y)
-{
-    x = 2 * y * y + 5;
-    return x;
-}
-
-int Triple(int x)
-{
-    return 3 * x;
-}
-
-char Print(int x)
-{
-    cout << "x =" << x << "\n";
-    return x;
-}
-
 /*string IntToString(int x,int y)
 {
     string ex = to_string(x);
@@ -61,13 +44,20 @@ int MedianThree(int a,int b,int c)
 
 int main()
 {
-    int x,y,z;
-    cin >> x;
-    y = Triple(x + 2);
-    cout << '(' << x << "," << y <<")\n";
-    cin >> z;
-    cout << Transfer(Triple(z),x) <<"\n";
-    Print(2 * y);
-    Print(6 - x);
+    /* string places [20];
+int ids [16];
+
+//nums [6] = (82 * nums [15]) - (12 * (nums[6] + nums[0]))*/
+
+    /* int n = 1;
+    while (n > 0) {
+        cout << "And Again\n";
+    }*/
+
+    int vals[5]= { };
+
+    for (int n=1; n < 51; n+=1) {
+        cout << n <<" ";
+    }
     return 0;
 }
