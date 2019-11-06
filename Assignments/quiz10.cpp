@@ -29,3 +29,4 @@ using namespace std;
 
     for (int n=1; n < 51; n+=1) {
         cout << n <<" ";
+    }
