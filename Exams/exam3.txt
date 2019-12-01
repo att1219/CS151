@@ -89,7 +89,6 @@ int Power(int n, int p)
         p = x;
     }
 
-}
 
 
 
@@ -104,6 +103,20 @@ int RemainingFactor(int n,int p)
         n = p;
         p = x;
     }
+
+    for(int i = 1; i <= n; i++) {
+
+        if(num % i == 0) {
+            return i; 
+        }
+    }
+
+     for(int i = 1; i <= p; i++) {
+
+        if(num % i == 0) {
+            return i; 
+        }
+    }
 }
 
 2c. A void function named Factorization() that takes an int parameter, int array parameter, and an int
@@ -116,7 +129,7 @@ prime factors of v.
 
 void Factorization(int v,int ps[],int n)
 {
-    
+
 }
 
 3. Generate the trace table for the function call F(34,2). Use a legend if needed.
