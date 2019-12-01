@@ -1,0 +1,137 @@
+1a. Write the void function named Evens() that takes an int parameter. It displays the even numbers between
+1 and the parameter inclusively on separate lines
+
+void Evens (int x);
+void Evens (int x) {
+    int a = 0; 
+    for (int i = 1; i < x; i ++)
+    {
+        i = i + 1;
+        cout << i <<"\n";
+    }
+}
+
+1b. Write the double function named Sum() that takes a double array parameter and an int parameter. Given
+that the int parameter represents the size of the array parameter, the function returns the sum of the
+elements of the array parameter.
+
+double Sum(double arr[], int x);
+double Sum(double arr[], int x)
+{
+    int sum = 0;
+    for (i >= 0; i < x; i += 1) {
+        sum = sum + arr[i];
+    }
+
+    return sum;
+}
+
+1c. Write the char function named Grade() that takes a double parameter. It returns 'A' if the parameter is
+greater than or equal to 90, 'B' if the parameter is between 90 (exclusively) and 80 (inclusively), 'C' if the
+parameter is between 80 (exclusively) and 65 (inclusively), or 'F' otherwise.
+
+char Grade(double x);
+char Grade(double x)
+{
+    if (x >= 90) {
+        return 'A';
+    } else if (x < 90 and x >= 80) {
+        return 'B'
+    } else if (x < 80 and x >= 65) {
+        return 'C'
+    } else {
+        return'F'
+    }
+}
+
+1d. Write the void function named ValidatePin() that takes no parameters. It prompts the user to enter a
+four digit pin, and then continuously prompts the user the message ''Retype pin: '' until the user enters
+their original input.
+
+void ValidatePin();
+void ValidatePin()
+{
+    int pin;
+    cout << "Enter a 4 digit number"
+    cin >> pin;
+
+    int attempt;
+    while (attempt != pin) {
+        cout << "Retype pin: \n";
+        cin >> attempt;
+    }
+}
+
+1e. Write the int function named PartialLength() that takes a null-terminated char array parameter and a
+char parameter. It returns the length of the array minus the number of times the char parameter appears
+in the array
+
+int PartialLength(char str[], char x)
+{
+    for (int n = 0; str[n] != '\0' || str[n] != x; n++)
+    {
+        int i = 0
+        i = i + 1;
+
+        return i;
+    }
+}
+
+2a. A int function named Power() that takes two int parameters named n and p respectively. It returns the
+highest power of p that can divide n evenly. For instances, Power(8,2) will return 3, Power(12,2) will
+return 2 and Power(21,2) will return 0.
+
+int Power(int n, int p)
+{
+    if (p > n) {
+        int x = n;
+        n = p;
+        p = x;
+    }
+
+}
+
+
+
+2b. A int function named RemainingFactor() that takes two int parameters named n and p respectively. It returns the remaining factor of n after all factors of p are removed from n. For instances, RemainingFactor(8,2)
+will return 1, RemainingFactor(12,2) will return 3 and RemainingFactor(21,2) will return 21.
+
+int RemainingFactor(int n,int p)
+{
+    if (p > n)
+    {
+        int x = n;
+        n = p;
+        p = x;
+    }
+}
+
+2c. A void function named Factorization() that takes an int parameter, int array parameter, and an int
+parameter named v, ps and n respectively. Given that ps is initializated with prime numbers in ascending
+order and n is the size of ps, the function displays the prime factorization of v with each factor in the format
+(p∧e ) where p is the prime number and e is its highest power in v. For instances, Factorization(8,a,6)
+will display ''(2∧3)'', Factorization(12,a,6) will display ''(2∧2)(3∧1)'' and Factorization(21,a,6)
+will display ''(3∧1)(7∧1)'' where a = [2,3,5,7,11,13]. Assume the list of primes will always contains all the
+prime factors of v.
+
+void Factorization(int v,int ps[],int n)
+{
+    
+}
+
+3. Generate the trace table for the function call F(34,2). Use a legend if needed.
+    
+    IN GOOGLE DOC
+
+4. For each line that has an error, write its line number and the correction of the line.
+
+06 void ABS (int &x)
+17 n = ABS(n);
+22 for(int i = mx;i < p;i += mx)
+36 for(int t = 1;t < n;t =+ 1)
+40 return cf;
+45 int mx = (a > b)?(a):(b);
+51 d[i] = mn + rand() % md;
+61 cout << v[q]; 
+62 char ch = (q + 1 < n)?('['):(']');
+71 RValues(a,50,15,10);

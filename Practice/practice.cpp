@@ -44,20 +44,8 @@ int MedianThree(int a,int b,int c)
 
 int main()
 {
-    /* string places [20];
-int ids [16];
-
-//nums [6] = (82 * nums [15]) - (12 * (nums[6] + nums[0]))*/
-
-    /* int n = 1;
-    while (n > 0) {
-        cout << "And Again\n";
-    }*/
-
-    int vals[5]= { };
-
-    for (int n=1; n < 51; n+=1) {
-        cout << n <<" ";
-    }
+    int x = 5;
+    x += 1;
+    cout << x;
     return 0;
 }
