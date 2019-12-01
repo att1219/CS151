@@ -148,3 +148,4 @@ void Factorization(int v,int ps[],int n)
 61 cout << v[q]; 
 62 char ch = (q + 1 < n)?('['):(']');
 71 RValues(a,50,15,10);
+75 cout << "nis" << CF(a,50) <<"\n";
